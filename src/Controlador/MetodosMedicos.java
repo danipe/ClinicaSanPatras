@@ -1,5 +1,8 @@
+package Controlador;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import ModelDades.Medicos;
 
 public class MetodosMedicos {
 ArrayList <Medicos> misMedicos;

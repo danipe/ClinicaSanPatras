@@ -1,5 +1,8 @@
+package Controlador;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import ModelDades.Pacientes;
 
 public class MetodosPacientes {
 int codigoPacienteAutoIncrementa;//Asignaremos un codigoIncrementable segun vayan añadiendo pacientes

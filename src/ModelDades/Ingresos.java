@@ -1,3 +1,4 @@
+package ModelDades;
 
 public class Ingresos {
  int codigoAutoIncrementa;

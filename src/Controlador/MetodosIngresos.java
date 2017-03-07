@@ -1,5 +1,9 @@
+package Controlador;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import ModelDades.Ingresos;
+import ModelDades.Medicos;
 
 public class MetodosIngresos {
 int codigoIngresoAutoincrementa;	
