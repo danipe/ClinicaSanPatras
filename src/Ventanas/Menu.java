@@ -18,7 +18,7 @@ import javax.swing.JLabel;
 public class Menu extends JFrame {
 
 	private JPanel contentPane;
-
+	static Menu frame;
 	/**
 	 * Launch the application.
 	 */
@@ -26,7 +26,7 @@ public class Menu extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Menu frame = new Menu();
+					frame = new Menu();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,6 +39,8 @@ public class Menu extends JFrame {
 	 * Create the frame.
 	 */
 	public Menu() {
+		setResizable(false);
+		MedicosView mv = new MedicosView(this);
 		ComprobacionSalir cs= new ComprobacionSalir(this);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -53,7 +55,7 @@ public class Menu extends JFrame {
 		JButton btnNewButton = new JButton("Pacientes");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				metodosPacientes.menuPacientes();
+				
 			}
 		});
 		btnNewButton.setBounds(37, 64, 113, 41);
@@ -71,7 +73,9 @@ public class Menu extends JFrame {
 		JButton btnNewButton_2 = new JButton("Medicos");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				metodosPacientes.menuPacientes();
+				
+				frame.setVisible(false);
+				mv.setVisible(true);
 			}
 		});
 		btnNewButton_2.setBounds(262, 64, 113, 41);

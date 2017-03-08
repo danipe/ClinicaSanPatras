@@ -24,6 +24,7 @@ public class ComprobacionSalir extends JFrame {
 	 */
 	
 	public ComprobacionSalir(Menu mn) {
+		setResizable(false);
 		this.mn=mn;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -42,6 +43,8 @@ public class ComprobacionSalir extends JFrame {
 				dispose();
 				
 				mn.dispose();
+				
+				System.exit(0);
 			}
 		});
 		btnNewButton.setBounds(41, 101, 119, 49);
