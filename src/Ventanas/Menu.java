@@ -41,7 +41,6 @@ public class Menu extends JFrame {
 	 */
 	public Menu() {
 		setResizable(false);
-		MedicosView mv = new MedicosView(this);
 		ComprobacionSalir cs= new ComprobacionSalir(this);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -49,6 +48,9 @@ public class Menu extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		MedicosView mv = new MedicosView(this);
+		PacientesView pv = new PacientesView(this);
 		MetodosPacientes metodosPacientes = new MetodosPacientes();
 		MetodosMedicos metodosMedicos = new MetodosMedicos();
 		MetodosIngresos metodosIngresos = new MetodosIngresos();
@@ -56,7 +58,8 @@ public class Menu extends JFrame {
 		JButton btnNewButton = new JButton("Pacientes");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				frame.setVisible(false);
+				pv.frame.setVisible(true);
 			}
 		});
 		btnNewButton.setBounds(37, 64, 113, 41);
@@ -74,7 +77,6 @@ public class Menu extends JFrame {
 		JButton btnNewButton_2 = new JButton("Medicos");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 				frame.setVisible(false);
 				mv.setVisible(true);
 			}
