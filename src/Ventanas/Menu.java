@@ -51,6 +51,7 @@ public class Menu extends JFrame {
 		
 		MedicosView mv = new MedicosView(this);
 		PacientesView pv = new PacientesView(this);
+		IngresoMenu im = new IngresoMenu(this);
 		MetodosPacientes metodosPacientes = new MetodosPacientes();
 		MetodosMedicos metodosMedicos = new MetodosMedicos();
 		MetodosIngresos metodosIngresos = new MetodosIngresos();
@@ -68,7 +69,8 @@ public class Menu extends JFrame {
 		JButton btnNewButton_1 = new JButton("Ingresos");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				frame.setVisible(false);
+				im.setVisible(true);
 			}
 		});
 		btnNewButton_1.setBounds(37, 166, 113, 41);

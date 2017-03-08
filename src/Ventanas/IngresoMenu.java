@@ -23,20 +23,11 @@ public class IngresoMenu extends JFrame {
 	private JPanel contentPane;
 	
 	private IngresoMenu im;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-			//Muestra ventana menu ingresos
-			IngresoMenu frame = new IngresoMenu();
-			frame.setVisible(true);
-	}
-
+	
 	/**
 	 * Create the frame.
 	 */
-	public IngresoMenu() {
+	public IngresoMenu(Menu mn) {
 		 im = this;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -77,6 +68,7 @@ public class IngresoMenu extends JFrame {
 		botonVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//Salimos de los ingresos
+				mn.setVisible(true);
 				dispose();
 			}
 		});
