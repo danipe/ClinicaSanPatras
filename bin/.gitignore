@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< Updated upstream
 /Ingreso.class
 /Ingresos.class
 /Lanzadera.class
@@ -12,3 +14,14 @@
 /Paciente.class
 /Pacientes.class
 /Principal.class
+=======
+/Ventanas/
+>>>>>>> Stashed changes
+/Controlador/
+/ModelDades/
+=======
+/Controlador/
+/ModelDades/
+/Ventanas/
+/MedicoVentana/
+>>>>>>> origin/ventanas
