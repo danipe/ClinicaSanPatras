@@ -46,6 +46,13 @@ public class MedicosView extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Eliminar");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MedicosViewBorrar mvb = new MedicosViewBorrar(mv);
+				mvb.setVisible(true);
+				mv.setVisible(false);
+			}
+		});
 		btnNewButton_1.setBounds(36, 131, 106, 48);
 		contentPane.add(btnNewButton_1);
 		

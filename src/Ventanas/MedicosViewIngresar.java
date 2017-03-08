@@ -80,6 +80,11 @@ public class MedicosViewIngresar extends JFrame {
 		contentPane.add(lblEspecialidad);
 		
 		JButton btnNewButton = new JButton("A\u00F1adir");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField_1.getText();
+			}
+		});
 		btnNewButton.setBounds(272, 114, 89, 23);
 		contentPane.add(btnNewButton);
 		

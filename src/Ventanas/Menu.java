@@ -12,6 +12,7 @@ import javax.swing.border.EmptyBorder;
 import Controlador.MetodosIngresos;
 import Controlador.MetodosMedicos;
 import Controlador.MetodosPacientes;
+
 import javax.swing.JLabel;
 
 
