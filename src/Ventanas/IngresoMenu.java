@@ -17,6 +17,16 @@ import java.awt.GridLayout;
 import javax.swing.JTextPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.border.BevelBorder;
+import javax.swing.JList;
+import javax.swing.AbstractListModel;
+import java.awt.GridBagConstraints;
+import javax.swing.BoxLayout;
+import java.awt.Component;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import java.awt.FlowLayout;
 
 public class IngresoMenu extends JFrame {
 
@@ -52,8 +62,25 @@ public class IngresoMenu extends JFrame {
 		JPanel Central = new JPanel();
 		contentPane.add(Central, BorderLayout.CENTER);
 		
-		JTextPane IngresosConsulta = new JTextPane();
-		Central.add(IngresosConsulta);
+		JList list = new JList();
+		list.setVisibleRowCount(10);
+		list.setModel(new AbstractListModel() {
+			String[] values = new String[] {""};
+			public int getSize() {
+				return values.length;
+			}
+			public Object getElementAt(int index) {
+				return values[index];
+			}
+		});
+		
+		JButton button = new JButton("Mostrar");
+		
+		JTextPane textPane = new JTextPane();
+		Central.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		Central.add(list);
+		Central.add(button);
+		Central.add(textPane);
 		
 		JPanel Derecha = new JPanel();
 		contentPane.add(Derecha, BorderLayout.EAST);
